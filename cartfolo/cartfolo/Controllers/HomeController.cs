@@ -10,6 +10,8 @@ namespace cartfolo.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Sample Index";
+            ViewBag.CurrentDate = DateTime.Now;
             return View();
         }
 
