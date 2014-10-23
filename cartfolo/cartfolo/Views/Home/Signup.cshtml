@@ -1,0 +1,40 @@
+﻿@model cartfolo.Models.GuestAccount
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signup</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <p>Your Name: @Html.TextBoxFor(x => x.Name)</p>
+        <p>Your Phone: @Html.TextBoxFor(x => x.Phone)</p>
+        <p>Your Email: @Html.TextBoxFor(x => x.Email)</p>
+        <p>Your Password: @Html.PasswordFor(x => x.Password)</p>
+
+    <p>
+        Can we contact you?
+        @Html.DropDownListFor(x => x.CanContact, new[] {
+                                                            new SelectListItem() 
+                                                            {
+                                                                Text = "Yes, of course",
+                                                                Value = bool.TrueString
+                                                            }
+                                                            , new SelectListItem() 
+                                                            {
+                                                                Text = "Please don't",
+                                                                Value = bool.FalseString
+                                                            }
+                                                        } , "Choose an option")
+    </p>
+    <input type="submit" value="Send away!" />
+    }
+</body>
+</html>

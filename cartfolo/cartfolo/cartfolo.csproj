@@ -177,6 +177,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\GuestAccount.cs" />
     <Compile Include="Models\GuestbookContext.cs" />
     <Compile Include="Models\GuestbookEntry.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -251,6 +252,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Guestbook\Create.cshtml" />
     <Content Include="Views\Guestbook\Index.cshtml" />
+    <Content Include="Views\Home\Signup.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
